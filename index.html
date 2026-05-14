@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Promedio de Notas</title>
+
+<link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <h1>Calculadora de Promedio</h1>
+
+    <p>
+        Ingrese las 5 notas del estudiante para calcular
+        el promedio final y su estado académico.
+    </p>
+
+    <div class="formulario">
+
+        <input type="number" id="n1" placeholder="Ingrese nota 1">
+        <input type="number" id="n2" placeholder="Ingrese nota 2">
+        <input type="number" id="n3" placeholder="Ingrese nota 3">
+        <input type="number" id="n4" placeholder="Ingrese nota 4">
+        <input type="number" id="n5" placeholder="Ingrese nota 5">
+
+        <button onclick="calcularPromedio()">
+            Calcular Promedio
+        </button>
+
+    </div>
+
+    <div id="resultado"></div>
+
+</div>
+
+<script>
+
+function calcularPromedio(){
+
+    let n1 = parseFloat(document.getElementById("n1").value);
+    let n2 = parseFloat(document.getElementById("n2").value);
+    let n3 = parseFloat(document.getElementById("n3").value);
+    let n4 = parseFloat(document.getElementById("n4").value);
+    let n5 = parseFloat(document.getElementById("n5").value);
+
+    let promedio = (n1 + n2 + n3 + n4 + n5) / 5;
+
+    let estado = "";
+
+    if(promedio >= 18 && promedio <= 20){
+
+        estado = "Excelente";
+
+    }else if(promedio >= 14){
+
+        estado = "Bueno";
+
+    }else if(promedio >= 11){
+
+        estado = "Regular";
+
+    }else{
+
+        estado = "Malo";
+    }
+
+    document.getElementById("resultado").innerHTML =
+
+    "<h2>Resultado Final</h2>" +
+
+    "<p><strong>Promedio:</strong> " +
+    promedio.toFixed(2) + "</p>" +
+
+    "<p><strong>Estado:</strong> " +
+    estado + "</p>";
+}
+
+</script>
+
+</body>
+</html>

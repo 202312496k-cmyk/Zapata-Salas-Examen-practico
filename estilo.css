@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+
+    url("imagen/imagen.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.contenedor{
+
+    width: 450px;
+
+    background-color: rgba(255,255,255,0.95);
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+
+    text-align: center;
+}
+
+/* TITULO */
+
+.contenedor h1{
+
+    margin-bottom: 15px;
+
+    color: #023047;
+
+    font-size: 35px;
+}
+
+/* PARRAFO */
+
+.contenedor p{
+
+    margin-bottom: 25px;
+
+    color: #555;
+
+    line-height: 1.5;
+
+    font-size: 16px;
+}
+
+/* INPUTS */
+
+.formulario input{
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.formulario input:focus{
+
+    outline: none;
+
+    border: 1px solid #219ebc;
+
+    box-shadow: 0px 0px 5px #219ebc;
+}
+
+/* BOTON */
+
+button{
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #219ebc;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover{
+
+    background-color: #023047;
+
+    transform: scale(1.03);
+}
+
+/* RESULTADO */
+
+#resultado{
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background-color: #f1f1f1;
+
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+#resultado h2{
+
+    margin-bottom: 15px;
+
+    color: #023047;
+}
+
+#resultado p{
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+
+    color: #333;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 500px){
+
+    .contenedor{
+
+        width: 90%;
+
+        padding: 25px;
+    }
+
+    .contenedor h1{
+
+        font-size: 28px;
+    }
+
+}
